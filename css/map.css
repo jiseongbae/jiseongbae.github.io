@@ -1,0 +1,23 @@
+*{
+vertical-align: baseline;
+margin: 0;
+padding: 0;
+border-radius: 0px;
+list-style:circle;
+-webkit-tap-highlight-color: transparent;
+}
+.wrap{
+    width: 100%;
+
+}
+.googleMap{
+    width: 90%;
+    margin: 0 auto;
+    padding: 100px;
+}
+.sub_come{
+    margin: 10px ;
+}
+.bus_come{
+    margin: 10px;
+}

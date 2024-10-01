@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>오시는길</title>
+    <link rel="stylesheet" href="../css/basic.css" />
+    <link rel="stylesheet" href="../css/map.css">
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+    fetch("header.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("header").innerHTML = data;
+        });
+
+    fetch("footer.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("footer").innerHTML = data;
+        });
+});
+    </script>
+  </head>
+  <body>
+    <div class="wrap">
+      <div id="header"></div>
+      <div class="googleMap">
+        <a href="../html/index.html"><span><h2>오시는길</h2></span></a>
+        <hr/>
+        <br/>
+        <h3>서울특별시 강남구 도곡동 번지 지하 554-5 1층</h3>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.7647701929595!2d127.03041179678956!3d37.48987700000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca14dfa34e9a3%3A0x107f45337b13945a!2z7KCV7ISx64uk67Cp!5e0!3m2!1sko!2skr!4v1727614557861!5m2!1sko!2skr"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+      <div class="wwcome">
+      <div class="contTitleWrap1">
+        <img src="../img/sub-icon.png"width="50"height="50"/>
+        <h3 class="contTitleIcon01"><h2>지하철</h2></h3>
+
+          <div class="bus_come">
+              <tbody> 
+                <tr>  
+                  <td class="alignL" style="height: 27px;">
+                    <span>양재역3번출구 도보400m이동후 우회전300m</span>
+                  </td>
+                  <tr> 
+                </tbody>
+          </div>
+        </a> 
+      </div>
+    </div>
+        <div class="contTitleWrap2">
+          <img src="../img/bus-icon.png"width="50"height="50"/>
+          <h3 class="contTitleIcon01"><h2>버스</h2></h3>
+            <div class="bus_come">
+                <tbody> 
+                  <tr>  
+                    <td class="alignL" style="height: 27px;">
+                      <span>강남07, 서초21, 강남02, 강남10, 서초08</span>
+                    </td>
+                    <tr> 
+                </tbody>
+            </div>
+          </a> 
+        </div>
+      <div id="footer"></div>
+    </div>
+  </div>
+  </body>
+</html>

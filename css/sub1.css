@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.6;
+    background-image:url(../img/bc4.jpg);
+}
+
+.board_wrap {
+    width: 100%;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     /* shadow color 는 사이트 참조*/
+}
+
+.board_title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.board_title strong {
+    font-size: 24px;
+    color: #333;
+}
+
+.board_title p {
+    font-size: 14px;
+    color: #777;
+    margin-top: 5px;
+}
+
+.board_write dl {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.board_write dt {
+    width: 80px;
+    font-size: 16px;
+    color: #333;
+}
+
+.board_write dd {
+    flex: 1;
+}
+
+.board_write input[type="text"],
+.board_write input[type="password"],
+.board_write textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.board_write textarea {
+    height: 200px;
+    resize: none;  /* 사이트 참조 */
+}
+
+.bt_wrap {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.bt_wrap a {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #3498db;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* 사이트 참조 */
+}
+
+.bt_wrap a.on {
+    background-color: #2ecc71;
+}
+
+.bt_wrap a:hover {
+    background-color: #2980b9;
+}
+
+.bt_wrap a.on:hover {
+    background-color: #27ae60;
+}

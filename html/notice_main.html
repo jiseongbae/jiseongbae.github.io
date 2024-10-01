@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공지사항</title>
+    <link rel="stylesheet" href="../css/boardpage.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const links = document.querySelectorAll(".board_title div");
+            links.forEach(link => {
+                link.addEventListener("click", function() {
+                    const targetPage = this.getAttribute("data-link");
+                    window.location.href = targetPage; // 해당 페이지로 이동
+                });
+            });
+            fetch("header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+            });
+
+            fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="header"></div>
+    <div class="board_wrap">
+        <div class="board_maintitle">
+            <strong>고객지원</strong>
+            <p>정성다방에 에 대해 궁금하거나 도움이 필요하시면 무엇이든 물어보세요.</p>
+            <p><a href="index.html">HOME</a></p>
+        </div>
+        <div class="board_title">
+            <div class="question" data-link="notice_faq.html">자주 하는 질문</div>
+            <div class="inquiry" data-link="notice_inquiry.html">1:1 문의</div>
+            <div class="notice" data-link="notice_sub.html">공지사항</div>
+            <div class="terms" data-link="notice_terms.html">이용약관</div>
+        </div>
+        <div class="board_list_wrap">
+            <div class="board_list">
+                <div class="top">
+                    <div class="num">번호</div>
+                    <div class="title">제목</div>
+                    <div class="writer">글쓴이</div>
+                    <div class="date">작성일</div>
+                    <div class="count">조회</div>
+                </div>
+            </div>
+            <div class="barnd_news">  <br><br><br><br> </div>
+            <hr>
+            <div class="board_page">
+                <a href="#" class="bt first"></a>
+                <a href="#" class="bt prev"></a>
+                <a href="#" class="num on">1</a>
+                <a href="#" class="num">2</a>
+                <a href="#" class="num">3</a>
+                <a href="#" class="num">4</a>
+                <a href="#" class="num">5</a>
+                <a href="#" class="bt next">></a>
+                <a href="#" class="bt last">>></a>
+            </div>
+            <div class="bt_wrap">
+                <a href="notice_write.html" class="on">등록</a>
+            </div>
+        </div>
+    </div>
+    <div id="footer"></div>
+</body>
+</html> 

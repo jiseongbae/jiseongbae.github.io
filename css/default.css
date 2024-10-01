@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap');
+@media (max-width:1960px){}
+.wrap{
+  width: 100%;
+  position: relative;
+  
+}
+#headerWrap{
+  width: 100%;
+  margin: 0 auto;
+  height: 110px;
+  position: relative;
+}
+/* --------------------------- topLogo start --------------------------*/
+.topLogo{
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.topLogo .logo{
+  vertical-align: middle;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 5px 0 0 5px;
+}
+.topLogo .logo a>img{
+  width: 40px;
+  height: 40px;
+}
+.topLogo .logo>h1{
+  padding: 0px 0 0 15px;
+  font-family: "Gowun Batang", serif;
+  font-style: normal;
+  font-size: 1.5rem;
+}
+.topLogo .topNav>ul{
+  display: flex;
+  flex-flow: row wrap;
+}
+.topLogo .topNav>ul>li{
+  margin: 15px 10px 0 20px;
+  font-size: 12px;
+}
+/* --------------------------- topLogo end --------------------------*/
+/* --------------------------- mainNav start --------------------------*/
+#gnbWrap{
+  position: absolute;
+  width: 100%;
+  height: 60px;
+}
+.mainNav{
+  width: 100%;
+  height: 100%;
+}
+.mainNav>ul{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+  padding: 0 15%;
+}
+li.gnb_nav{
+  width: 10%;
+  height: 100%;
+  text-align: center;
+}
+li.gnb_nav>a{
+  display: block; 
+  font-size: 16px; 
+  font-weight: 600; 
+  color: #1a1a1a; 
+  padding: 20px 10px;
+  position: relative;
+}
+li.gnb_nav:hover>a::before{
+  content: '';
+  display: block;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+  width: 20px;
+  height: 20px;
+  background-color: rgb(255, 186, 186);
+  border-radius: 50%;
+} 
+.gnb_sub_wrap{
+  opacity: 0;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  background-color: #f5f5f5;
+  transition: all .3s;
+  overflow: hidden;
+  height: 0;
+}
+
+.gnb_sub_wrap.active { 
+  width: 100%;
+  opacity: 1; 
+  height: 100px; 
+  text-align: center;
+  z-index: 2;
+}
+.gnb_sub_wrap>ul{
+  width: 50%;
+  margin: 0 auto;
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.gnb_sub_wrap>ul>li>a{
+  display: block;
+  padding: 20px;
+  opacity: .5s;
+}
+.gnb_sub_wrap>ul>li>a:hover{
+  opacity: 1;
+  font-weight: 700;
+}
+/* --------------------------- mainNav end --------------------------*/
+
+
+.img_comp_container {
+  width: 100%;
+  margin: 0 auto;
+  height: 700px;
+  /* position: relative; */
+}
+
+.img_comp_img {
+  width: 100%;
+  height: 100%;
+  display:block;
+  /* height: auto; */
+  /* overflow:hidden; */
+}
+
+.img_comp_img img {
+  width:"100%";
+  height:"700";
+}
+
+.img_comp_slider {
+  position: absolute;
+  z-index:9;
+  cursor: ew-resize;
+  width: 40px;
+  height: 40px;
+  background-color: #2196F3;
+  opacity: 0.7;
+  border-radius: 50%;
+}
+
+/* --------------------------- menuWrap srart --------------------------*/
+.menuWrap{
+  margin-top: 50px;
+  width: 90%;
+  margin: 0 auto;
+  background-color: rgba(217,181,167,0.5);
+}
+.menuWrap>h2{
+  margin-top: 150px;
+  text-align: center;
+  padding-top: 30px;
+  font-size: 2rem;
+}
+.listBox{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin: 30px 5%;
+  padding-bottom: 20px;
+}
+.menuList{
+  width: 23%;
+  background-color: #f0f0f0;
+}
+/* .menuList>a{
+
+} */
+.menuList>a>img{
+  width: 100%;
+}
+.menuList>ul{
+  padding: 20px;
+}
+.menuList>ul>li{
+  text-align: center;
+  padding: 5px 0;
+}
+.menuList>ul>li:nth-child(3){
+  margin-bottom: 10px;
+}
+.menuList>ul>li:nth-child(4){
+  text-align: justify;
+  /* text-indent: 20px; */
+  display: inline-block;
+}
+.menuList>ul>li:nth-child(5){
+  display: inline-block;
+  text-decoration: line-through;
+}
+
+/* --------------------------- menuWrap end --------------------------*/
+/* --------------------------- containerBox start --------------------------*/
+.containerBox{
+  background: url(../img/eventImgbg.jpg) no-repeat center;
+  background-attachment : fixed;
+}
+.eventBox{
+  width: 90%;
+  margin: 0 auto;
+  margin: 50px;
+  padding: 20px;
+  padding-top: 100px;
+  color: #f7f7f7;
+  position: relative;
+}
+.eventContent{
+  position: absolute;
+  left: 20%;
+  top: 15%;
+  width: 50%;
+  text-shadow: 2px 2px 3px #1a1a1a;
+}
+.eventContent>h3{
+  font-size: 4rem;
+  padding-bottom: 60px;
+}
+.eventContent>span{
+  font-size: 1.4rem;
+  line-height: 2;
+}
+.fav_img{
+  width: 90%;
+  margin-left: 25%;
+  height: 651px;
+  background: url(../img/eventImg1.png) no-repeat right;
+  background-size: contain;
+}
+.boardBox{
+  width: 80%;
+  margin: 0 auto;
+  height: 80%;
+  padding: 30px;
+}
+.boardList{
+  width: 100%;
+  border-collapse: collapse;
+  border-left:0;
+  border-right: 0;
+  background-color: rgba(243, 243, 243, 0.2);
+  margin-bottom: 100px;
+}
+.boardList>caption{
+  font-size: 2rem;
+  padding-bottom: 30px;
+  color: #f4f4f4;
+  text-shadow: 2px 2px 3px #1a1a1a;
+}
+.boardHead{
+  background-color: #dcdcdc;
+}
+.boardList th,.boardList td{
+  padding: 10px;
+  border-left: 0;
+}
+.boardList th:last-child,
+.boardList td:last-child {
+	border-right: 0;
+}
+
+/* --------------------------- containerBox end --------------------------*/
+
+/* --------------------------- footer start --------------------------*/
+#footer{
+  margin-top: 100px;
+  background-color: #3d3d3d;
+  padding: 20px;
+}
+.copyright,.mbn,.mbn_last{
+  text-align: center;
+  color: #ccc;
+  font-size: 12px;
+  padding: 0 10px;
+}
+.mbn{
+  border-right: 1px solid #757575;
+}
+.btned_link{
+  color: #fdfdfd;
+  border: 1px solid #fdfdfd;
+  padding: 5px 10px;
+  box-shadow: 1px 1px 1px #fdfdfd;
+  display: inline-block;
+  margin: 20px 10px;
+}
+
+.copy_menu{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.copy_menu>li{
+  margin: 0 8px;
+}
+span.en{
+  display: inline-block;
+  padding-top: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------------- footer end --------------------------*/
+
+
+

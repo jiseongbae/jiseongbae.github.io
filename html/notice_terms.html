@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/sub1.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const links = document.querySelectorAll(".board_title div");
+        
+            links.forEach(link => {
+                link.addEventListener("click", function() {
+                    const targetPage = this.getAttribute("data-link");
+                    window.location.href = targetPage; // 해당 페이지로 이동
+                });
+            });
+        });
+        
+            </script>
+        </head>
+        <body>
+            <div class="board_wrap">
+                <div class="board_maintitle">
+                    <strong>이용약관</strong>
+                    <p>정성다방에 에 대해 궁금하거나 도움이 필요하시면 무엇이든 물어보세요.</p>
+                    <a href="notice_main.html">돌아가기</a>
+                </div>
+                <div class="board_title">
+                </div>
+                <div class="board_list_wrap">
+                    <div class="board_list">
+                        <div class="top">
+                            <div class="terms_ofuse">이용약관 안내</div>
+                        </div>
+                        <div>
+                            <div class="terms_oflist">
+                                <span class="term_of">이용약관</span>
+                                <span class="term_of_p">
+                                <h2>제 1조 (목적)</h2>
+                                    <p>이 약관은 [카페 이름] (이하 “회사”)가 제공하는 서비스(이하 “서비스”)의 이용 조건 및 절차, 회사와 이용자 간의 권리와 의무, 책임 사항 등을 규정하는 것을 목적으로 합니다.</p>
+                                    <hr>
+                                <h2>제 2조 (용어의 정의)</h2>
+                                <p>
+                                    1. “이용자”란 회사의 서비스에 접속하여 이 약관에 따라 회사가 제공하는 서비스를 이용하는 고객을 의미합니다.<br>
+                                    2. “회원”이란 회사에 회원 가입을 한 이용자를 의미합니다.<br>
+                                    3. “비회원”이란 회원 가입을 하지 않고 회사의 서비스를 이용하는 이용자를 의미합니다.<br>
+                                </p>
+                                    <hr>
+                                <h2>제 3조 (약관의 효력 및 변경)</h2>
+                                <p>
+                                    1. 이 약관은 서비스 화면에 게시함으로써 효력을 발생합니다.<br>
+                                    2. 회사는 필요한 경우 약관을 변경할 수 있으며, 변경된 약관은 서비스 화면에 공지합니다.
+                                </p>
+                                    <hr>
+                                <h2>제 4조 (회원가입)</h2>
+                                <p>
+                                    1. 이용자는 회사가 정한 가입 양식에 따라 회원 가입을 신청하여야 합니다.<br>
+                                    2. 회사는 회원 가입 신청 시, 이용자가 제공한 정보에 대해 확인 후 승낙합니다.<br>
+                                </p>
+                                <hr>
+                                <h2>제 5조 (서비스 이용)</h2>
+                                <p>
+                                    1. 회사는 연중무휴, 1일 24시간 서비스를 제공합니다.<br>
+                                    2. 회사는 서비스의 품질 향상을 위해 정기적인 점검 및 유지보수를 할 수 있으며, 이 경우 사전에 이용자에게 공지합니다.<br>
+                                </p>
+                                <hr>
+                                <h2>제 6조 (이용자의 의무)</h2>
+                                <p>
+                                    1. 이용자는 서비스 이용 시, 타인의 정보를 도용하거나 허위 정보를 입력해서는 안 됩니다.<br>
+                                    2. 이용자는 서비스 이용 중 발생한 문제에 대해 스스로 책임을 져야 합니다.<br>
+                                </p>
+                                <hr>
+                                <h2>제 7조 (서비스 이용의 제한)</h2>
+                                <p>
+                                    회사는 다음의 경우 서비스 이용을 제한할 수 있습니다.<br>
+                                    1. 회원 가입 시 허위 정보를 기재한 경우<br>
+                                    2. 서비스 운영을 방해하는 행위를 한 경우<br>
+                                    3. 기타 약관을 위반한 경우<br>
+                                </p>
+                                <hr>
+                                <h2>제 8조 (개인정보 보호)</h2>
+                                <p>
+                                    회사는 이용자의 개인정보를 보호하기 위해 최선을 다하며, 개인정보 처리방침을 별도로 정하여 이를 준수합니다.
+                                </p>
+                                <hr>
+                                <h2>제 9조 (면책 조항)</h2>
+                                <p>
+                                    회사는 천재지변, 불가항력적인 사유로 인해 서비스를 제공할 수 없는 경우, 책임을 지지 않습니다.
+                                </p>
+                                <hr>
+                                <h2>제 10조 (약관의 준거법 및 재판관할)</h2>
+                                <p>
+                                    이 약관에 대한 해석 및 적용에 관하여는 대한민국 법을 적용하며, 분쟁 발생 시 회사의 본사 소재지를 관할하는 법원에 제소합니다.
+                                </p>
+                            </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </body>
+        </html> 

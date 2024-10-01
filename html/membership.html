@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/basic.css">
+    <link rel="stylesheet" href="../css/membership.css">
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded",function(){
+      const zipbtn = document.querySelector("#zipbtn");
+      const zipcode = document.querySelector("#post");
+      const address1 = document.querySelector("#address1");
+      const address2 = document.querySelector("#address2");
+
+      zipbtn.addEventListener("click",function(){
+        new daum.Postcode({
+          oncomplete: function(data){  
+          zipcode.value = data.zonecode; 
+
+          let fullAddress=""; 
+          let extendAddress=""; 
+
+          if(data.userSelectedType==="R"){ 
+            fullAddress = data.roadAddress;
+          }else{ 
+            fullAddress = data.jibunAddress;
+          }
+
+          if(data.userSelectedType==="R"){
+            if(data.bname !== ""){ 
+              extendAddress += data.bname;  
+            }
+            if(data.buildingName !== "") 
+              extendAddress += (extendAddress !== "") ? "," + data.buildingName : data.buildingName;
+
+          }
+          fullAddress += (extendAddress !== "") ? "(" + extendAddress + ")" : "";
+
+          address1.value = fullAddress;
+          address2.focus();
+          
+         }
+        }).open();
+      })
+
+
+    });
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <div class="membership">    
+        <h1>회원가입</h1>
+
+        <form class="formBox" action="" method="post" name="membership" onsubmit="return memberCheck()">
+                   <div class="idBox">
+                     <ul>
+                        <li class="Title"><label for="id">아이디  </label></li>
+                        <li class="Content">
+                            <input type="text" class="input1 transWidth" name="id" id="id" placeholder="아이디 입력(6~20자)" required>
+                            <button type="button" class="btn">중복체크</button>
+                        </li>
+                    </ul>
+                   </div>
+                   <div class="pwBox">
+                    <ul>
+                        <li class="Title"><label for="pw1">비밀번호  </label></li>
+                        <li class="Content">
+                            <input type="text" class="input1" name="pw1" id="pw1" placeholder="비밀번호 입력" required></li>
+                    </ul>
+                   </div>
+                   <div class="pw1Box">
+                    <ul>
+                        <li class="Title"><label for="pw2">비밀번호 확인  </label></li>
+                        <li class="Content"><input type="text" class="input1" name="pw2" placeholder="비밀번호 재입력" required></li>
+                    </ul>
+                   </div>
+                   <div class="nameBox">
+                    <ul>
+                        <li class="Title"><label for="name">이름  </label></li>
+                        <li class="Content"><input type="text" class="input1" name="name" placeholder="이름 입력" required></li>
+                    </ul>
+                   </div>
+                   <div class="zipcodeBox">
+                    <ul>
+                        <li class="Title"><label for="post">우편번호  </label></li>
+                        <li class="Content">
+                            <input type="text" class="input1 transWidth" name="zipcode" id="post">
+                            <button type="button" class="btn" id="zipbtn">우편번호</button>
+                        </li>
+                    </ul>
+                   </div>
+                   <div class="addressBox">
+                    <ul>
+                        <li class="Title"><label for="address1">주소  </label></li>
+                        <li class="Content">
+                            <input type="text" class="input1 address" name="address1" id="address1" readonly></li>
+                    </ul>
+                   </div>
+                   <div class="address1Box">
+                    <ul>
+                        <li class="Title"><label for="address2">상세주소  </label></li>
+                        <li class="Content">
+                            <input type="text" class="input1 address" name="address2"id="address2" >
+                        </li>
+                    </ul>
+                   </div>
+                   <div class="phoneBox">
+                    <ul>
+                        <li class="Title"><label for="phone">휴대폰  </label></li>
+                        <li class="Content"><input type="text" class="input1" name="phone" required placeholder="휴대폰 입력 - 는 제외"></li>
+                    </ul>
+                   </div>
+                   <div class="mailBox">
+                    <ul>
+                        <li class="Title mail1"><label for="mail">이메일  </label></li>
+                        <li class="Content"><input type="text" class="input1 mail" name="mail" required placeholder="이메일 입력"> @ 
+                            <select class="selectmail" name="mail">
+                                <option value="naver.com">naver.com</option>
+                                <option value="naver.com">daum.net</option>
+                                <option value="naver.com">hanmail.com</option>
+                                </select>
+                        </li>
+                        
+                    </ul>
+                    </div>
+                    <div class="submitBox">
+                    <ul>
+                    <li colspan="2" class="Content_last"></li>
+                        <input type="button" class="button" value="이전단계" onClick=location.href="index.html">
+                        <input type="submit" class="submit" value="가입하기" onclick=location.href="login.html">
+                        <input type="reset" class="reset" value="다시작성">
+                    </ul>
+                  </div>
+                </div>
+            
+            
+        
+
+
+    
+            </div>
+</body>
+</html>

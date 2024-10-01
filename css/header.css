@@ -1,0 +1,116 @@
+#headerWrap{
+  width: 100%;
+  margin: 0 auto;
+  height: 110px;
+  position: relative;
+}
+/* --------------------------- topLogo start --------------------------*/
+.topLogo{
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.topLogo .logo{
+  vertical-align: middle;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 5px 0 0 5px;
+}
+.topLogo .logo a>img{
+  width: 40px;
+  height: 40px;
+}
+.topLogo .logo>h1{
+  padding: 0px 0 0 15px;
+  font-family: "Gowun Batang", serif;
+  font-style: normal;
+  font-size: 1.5rem;
+}
+.topLogo .topNav>ul{
+  display: flex;
+  flex-flow: row wrap;
+}
+.topLogo .topNav>ul>li{
+  margin: 15px 10px 0 20px;
+  font-size: 12px;
+}
+/* --------------------------- topLogo end --------------------------*/
+/* --------------------------- mainNav start --------------------------*/
+#gnbWrap{
+  position: absolute;
+  width: 100%;
+  height: 60px;
+}
+.mainNav{
+  width: 100%;
+  height: 100%;
+}
+.mainNav>ul{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+  padding: 0 15%;
+}
+li.gnb_nav{
+  width: 10%;
+  height: 100%;
+  text-align: center;
+}
+li.gnb_nav>a{
+  display: block; 
+  font-size: 16px; 
+  font-weight: 600; 
+  color: #1a1a1a; 
+  padding: 20px 10px;
+  position: relative;
+}
+li.gnb_nav:hover>a::before{
+  content: '';
+  display: block;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+  width: 20px;
+  height: 20px;
+  background-color: rgb(255, 186, 186);
+  border-radius: 50%;
+} 
+.gnb_sub_wrap{
+  opacity: 0;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  background-color: #f5f5f5;
+  transition: all .3s;
+  overflow: hidden;
+  height: 0;
+}
+.gnb_sub_wrap.active { 
+  width: 100%;
+  opacity: 1; 
+  height: 100px; 
+  text-align: center;
+  z-index: 2;
+}
+.gnb_sub_wrap>ul{
+  width: 50%;
+  margin: 0 auto;
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.gnb_sub_wrap>ul>li>a{
+  display: block;
+  padding: 20px;
+  opacity: .5s;
+}
+.gnb_sub_wrap>ul>li>a:hover{
+  opacity: 1;
+  font-weight: 700;
+}
+/* --------------------------- mainNav end --------------------------*/

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="icon" href="../img/LogoCoffee.png">
+  <link rel="stylesheet" href="../css/basic.css">
+  <link rel="stylesheet" href="../css/default.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <script src="../js/mainSlider.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // initComparisons();
+
+      const gnbLi = document.querySelectorAll('.gnb > li');
+      const subMenu = document.querySelectorAll('.gnb_sub_wrap');
+
+      for (let i = 0; i < gnbLi.length; i++) {
+        gnbLi[i].addEventListener('mouseenter', function () {
+          subMenu[i].classList.add('active');
+        });
+      }
+
+      for (let i = 0; i < gnbLi.length; i++) {
+        gnbLi[i].addEventListener('mouseleave', function () {
+          subMenu[i].classList.remove('active')
+        });
+      }
+    });
+  </script>
+</head>
+<body>
+  <header id="headerWrap">
+    <div class="topLogo">
+      <div class="logo">
+        <a href="#"><img src="../img/LogoCoffee.png" alt="정성다방메인홈페이지"></a>
+        <h1>정성다방</h1>
+      </div>
+      <div class="topNav">
+        <ul>
+          <li><a href="login2.html" target="_blank">로그인</a></li>
+          <li><a href="membership.html" target="_blank">회원가입</a></li>
+          <li><a href="notice_main.html" target="_blank">게시판</a></li>
+        </ul>
+      </div>
+    </div>
+    <nav id="gnbWrap">
+      <div class="mainNav">
+        <ul class="gnb">
+          <li class="gnb_nav gnb_nav01">
+            <a href="#">회사소개</a>
+            <div class="gnb_sub_wrap">
+              <ul>
+                <li><a href="#">커피</a></li>
+                <li><a href="#">에소프레소</a></li>
+                <li><a href="#">최상의커피</a></li>
+                <li><a href="#">커피이야기</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="gnb_nav gnb_nav02">
+            <a href="#">메뉴</a>
+            <div class="gnb_sub_wrap">
+              <ul>
+                <li><a href="menupage.html" target="_blank">커피</a></li>
+                <li><a href="#">에소프레소</a></li>
+                <li><a href="#">커피이야기</a></li>
+                <li><a href="#">최상의커피</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="gnb_nav gnb_nav03">
+            <a href="#">열린공간</a>
+            <div class="gnb_sub_wrap">
+              <ul>
+                <li><a href="#">커피이야기</a></li>
+                <li><a href="#">에소프레소</a></li>
+                <li><a href="#">커피</a></li>
+                <li><a href="#">최상의커피</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="gnb_nav gnb_nav04">
+            <a href="#">환경보호</a>
+            <div class="gnb_sub_wrap">
+              <ul>
+                <li><a href="#">커피</a></li>
+                <li><a href="#">커피이야기</a></li>
+                <li><a href="#">최상의커피</a></li>
+                <li><a href="#">에소프레소</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="gnb_nav gnb_nav05">
+            <a href="#">이용안내</a>
+            <div class="gnb_sub_wrap">
+              <ul>
+                <li><a href="#">커피이야기</a></li>
+                <li><a href="#">에소프레소</a></li>
+                <li><a href="#">최상의커피</a></li>
+                <li><a href="#">커피</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="gnb_nav gnb_nav06">
+            <a href="#">자료실</a>
+            <div class="gnb_sub_wrap">
+              <ul>
+                <li><a href="#">커피이야기</a></li>
+                <li><a href="#">에소프레소</a></li>
+                <li><a href="#">커피</a></li>
+                <li><a href="#">최상의커피</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="gnb_nav gnb_nav07">
+            <a href="#">오시는길</a>
+            <div class="gnb_sub_wrap">
+              <ul>
+                <li><a href="#">커피이야기</a></li>
+                <li><a href="#">커피</a></li>
+                <li><a href="#">최상의커피</a></li>
+                <li><a href="#">에소프레소</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+</body>
+</html>

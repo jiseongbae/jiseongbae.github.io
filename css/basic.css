@@ -1,0 +1,32 @@
+/* 주의 - <style></style>를 사용하지 않은 */
+/* reset 초기화 */
+body,div,span,p,h1,h2,h3,h4,h5,h6,hr,table,tbody,tr,td,th,ul,ol,li,a,br,article, header,footer,section,aside,img,iframe,input,select,textarea,form{
+  margin: 0;
+  padding: 0;
+}
+/* body 태그 설정 */
+body{
+  width: 100%; 
+  /* width값은 12로 나누어 0이 되는값으로 설정하는 것이 좋음*/
+  margin: 0 auto;  /* 부모 요소를 기준으로 가운데로 배치 */
+  padding: 0;
+}
+ul,ol,li{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+img{
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+.h1Test2 {
+  font-family: "Nanum Pen Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}

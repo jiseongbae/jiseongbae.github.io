@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>정성다방</title>
+  <link rel="stylesheet" href="../css/login.css">
+  <script>
+    document.addEventListener("DOMContentLoaded",function(){
+      const modalBox = document.querySelector("#modalBox");
+      const open = document.querySelector("#open");
+      const close = document.querySelector("#close");
+      
+      const toggleBtn = function(){
+        modalBox.classList.toggle("active");
+      }
+      open.addEventListener("click",toggleBtn); 
+      close.addEventListener("click",toggleBtn);
+    });
+  </script>
+</head>
+<body>
+  <div id="wrap">
+    <div class="header">
+      <a href="../html/index.html"><img src="../img/LogoCoffee.png" alt=""></a>
+      <h1>LOGIN</h1>
+    </div>
+    <button id="open">로그인</button>
+    <div id="modalBox">
+      <button id="close">&times;</button>
+      <form class="modalBox" action="#" method="post" name="join" >
+        <div class="modalList">
+          <img class="icon_login" src="../img/icon-login.png" alt=""> <input type="joinid" id="joinid" name="join_id" placeholder="아이디를 입력하세요" onfocus="this.placeholder=''" onblur="this.placeholder = '아이디를 입력하세요'">
+        </div>
+        <div class="modalList">
+          <img class="icon_login" src="../img/icon-password.png" alt="">
+          <input type="password" id="joinpwd1" name="pwd1" placeholder="비밀번호를 입력하세요" onfocus="this.placeholder=''" onblur="this.placeholder = '비밀번호를 입력하세요'" /><br>
+        </div>
+        <div class="btnWrap">
+          <a href="#"><span>회원가입</span></a>
+          <a href="../html/index.html"><span>로그인</span></a>
+        </div>
+      </form>
+    </div>
+
+    
+
+
+
+
+  </div>
+</body>
+</html>

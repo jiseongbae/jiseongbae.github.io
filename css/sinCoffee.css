@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Hi+Melody&display=swap');
+/* font-family: "Gowun Batang", serif; */
+/* font-family: "Hi Melody", sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+/* font-family: "Noto Sans KR", sans-serif; */
+body{
+  width: 100%;
+  background-image: url(../img/bc_cinCoffee.jpg) ;
+  background-size: cover;
+  position: relative;
+}
+body::after {
+  content: '';
+  position: absolute;
+  background: rgb(210, 210, 210);
+  z-index: -1;
+  inset: 0;
+  opacity: 0.5;
+  height: 100vh;
+}
+.wrap{
+  width: 100%;
+}
+.header{
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 20px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.header .topLogo{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+.header .topLogo>a>img{
+  width: 50px;
+  height: 50px;
+}
+.header .topLogo>h1{
+  font-size: 24px;
+  font-family: "Gowun Batang", serif;
+  font-weight: 700;
+  display: inline-block;
+  margin: 10px;
+}
+.header .topNav>ul{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  /* margin-top: 15px; */
+}
+.header .topNav>ul>li{
+  padding: 20px 15px;
+  /* font-family: "Gowun Batang", serif; */
+}
+.container{
+  width: 80%;
+  margin: 0 auto;
+  text-align:center ;
+  font-size: 3.5rem;
+  padding-top: 20vh;
+}
+.container>ul>li:nth-child(1){
+  font-family: "Noto Sans KR", sans-serif;
+  letter-spacing: 10px;
+  text-shadow: 0.2rem 0.2rem rgb(163, 163, 163);
+}
+.container>ul>li:nth-child(1)>strong:hover{
+  background-color: rgb(0, 0, 0);
+  border-radius: 50%;  
+  cursor: pointer;
+  transition: 0.5s;
+  color:white;
+}
+.container>ul>li:nth-child(1):after{
+  content: '';
+  display: block;
+  width: 0%;
+  height: 2px;
+  margin-top: 50px;
+  background-color: #494949;
+  box-shadow: 1px 1px 5px #494949;
+  transition: 1s;
+}
+.container>ul>li:nth-child(1):hover::after{
+  width: 100%;
+}
+.container>ul>li:nth-child(2){
+  font-family: "Gowun Batang", serif;
+  font-weight: 700;
+  margin-top: 30px;
+  font-size: 4rem;
+  letter-spacing: 10px;
+}
+.button{
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+button {
+  position: relative;
+  padding: 12px 35px;
+  background: var(--color);
+  font-size: 17px;
+  font-weight: 700;
+  color: #303030;
+  border: 3px solid var(--color);
+  border-radius: 8px;
+  box-shadow: 0 0 0 #fec1958c;
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+}
+:root{
+  --color: #f595fe;
+}
+.star-1 {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  width: 25px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #ffffff);
+  z-index: -5;
+  transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+}
+
+.star-2 {
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-3 {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-4 {
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  width: 8px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all .8s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-5 {
+  position: absolute;
+  top: 25%;
+  left: 45%;
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all .6s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-6 {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all .8s ease;
+}
+
+button:hover {
+  background: transparent;
+  color: var(--color);
+  box-shadow: 0 0 25px #ecececf8;
+}
+
+button:hover .star-1 {
+  position: absolute;
+  top: -80%;
+  left: -30%;
+  width: 25px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-2 {
+  position: absolute;
+  top: -25%;
+  left: 10%;
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-3 {
+  position: absolute;
+  top: 55%;
+  left: 25%;
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-4 {
+  position: absolute;
+  top: 30%;
+  left: 80%;
+  width: 8px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-5 {
+  position: absolute;
+  top: 25%;
+  left: 115%;
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}

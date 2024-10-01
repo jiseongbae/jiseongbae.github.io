@@ -1,0 +1,82 @@
+body {
+  width: 100%;
+  margin: 0;
+}
+
+.wrap{
+  width: 100%;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #f2e3d5;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: rgb(247, 128, 128);
+  font-weight: bolder;
+  font-size: 20px;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:focus{
+  color: white;
+  background-color: #d9b5a7;
+}
+li a:hover{
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: #d9b5a7
+}
+.active {
+  color:rgb(255, 255, 255);
+  background-color: #d9b5a7;
+  border: 3px solid rgb(248, 158, 158);
+  border-radius: 5px;
+}
+.menu {
+  flex: 1;
+  padding: 20px;
+  background: #d9b5a7
+}
+.heading3 {
+  text-align: center;
+  font-size: 40px;
+  color: #f2e3d5;
+  font-weight: bold;
+  border-bottom: 2px solid #b2744c;
+  padding: 5px;
+}
+.menu .card {
+  background: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.star i {
+  color: #b2744c;
+}
+.menu h3 {
+  color: #b2744c;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 25px;
+}
+.menu p {
+  font-size: 16px;
+  color: #b2744c;
+  padding-top: 10px;
+}
+.menu p span {
+  float: right;
+  cursor: pointer;
+}
